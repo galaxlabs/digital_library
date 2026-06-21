@@ -1,0 +1,126 @@
+{
+ "autoname": "format:PG-{book}-{page_number}",
+ "creation": "2026-06-01 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "book",
+  "translation",
+  "page_number",
+  "content_hash",
+  "encrypted_file",
+  "content_text",
+  "search_index",
+  "page_type",
+  "chapter",
+  "section_title"
+ ],
+ "fields": [
+  {
+   "fieldname": "book",
+   "fieldtype": "Link",
+   "label": "Book",
+   "options": "Digital Book",
+   "reqd": 1
+  },
+  {
+   "fieldname": "translation",
+   "fieldtype": "Link",
+   "label": "Translation",
+   "options": "Book Translation"
+  },
+  {
+   "fieldname": "page_number",
+   "fieldtype": "Int",
+   "label": "Page Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "content_hash",
+   "fieldtype": "Data",
+   "label": "Content Hash (SHA-256)"
+  },
+  {
+   "fieldname": "encrypted_file",
+   "fieldtype": "Attach",
+   "label": "Encrypted File (AES-256-GCM)"
+  },
+  {
+   "fieldname": "content_text",
+   "fieldtype": "Long Text",
+   "label": "Plain Text Content (TEMP)"
+  },
+  {
+   "fieldname": "search_index",
+   "fieldtype": "Text",
+   "label": "Search Index (encrypted tokens)"
+  },
+  {
+   "fieldname": "page_type",
+   "fieldtype": "Select",
+   "label": "Page Type",
+   "options": "Text\nImage\nMixed\nTitle\nChapter Start"
+  },
+  {
+   "fieldname": "chapter",
+   "fieldtype": "Data",
+   "label": "Chapter Name"
+  },
+  {
+   "fieldname": "section_title",
+   "fieldtype": "Data",
+   "label": "Section Title"
+  }
+ ],
+ "is_submittable": 0,
+ "is_virtual": 0,
+ "modified": "2026-06-21 00:00:00",
+ "module": "Digital Library",
+ "name": "Book Page",
+ "naming_series": "PG-{book}-.####",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "permlevel": 0,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "set_user_permissions": 0,
+   "share": 1,
+   "submit": 0,
+   "write": 1
+  },
+  {
+   "amend": 0,
+   "cancel": 0,
+   "create": 0,
+   "delete": 0,
+   "email": 0,
+   "export": 0,
+   "import": 0,
+   "permlevel": 0,
+   "print": 0,
+   "read": 1,
+   "report": 0,
+   "role": "All",
+   "set_user_permissions": 0,
+   "share": 0,
+   "submit": 0,
+   "write": 0
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "page_number, chapter",
+ "sort_field": "page_number",
+ "sort_order": "ASC",
+ "title_field": "page_number",
+ "track_changes": 1
+}
